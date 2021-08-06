@@ -71,11 +71,7 @@ namespace JuguemosGato
             if (buttons.Count > 0)
             {
                 int index = rand.Next(buttons.Count); // generate a random number within the number of buttons available
-                buttons[index].Enabled = false; // assign the number to the button
-                                                // when the random number is generated then we will look into the list
-                                                // for what that number is we select that button
-                                                // for example if the number is 8
-                                                // then we select the 8th button in the listO
+                buttons[index].Enabled = false; 
                 jugadorActual = Player.O; // set the AI with O
                 buttons[index].Text = jugadorActual.ToString(); // show O on the button
                 buttons[index].BackColor = System.Drawing.Color.DarkSalmon; // change the background of the button dark salmon colour
@@ -113,7 +109,7 @@ namespace JuguemosGato
                || a1.Text == "X" && b2.Text == "X" && c3.Text == "X"
                || a3.Text == "X" && b2.Text == "X" && c1.Text == "X")
             {
-                // if any of the above conditions are met
+                
                 IA.Stop(); //stop the timer
                 MessageBox.Show(nombre + " Wins"); // show a message to the player
                 playerWins++; // increase the player wins 
@@ -131,8 +127,6 @@ namespace JuguemosGato
                    || a3.Text == "O" && b2.Text == "O" && c1.Text == "O")
             {
 
-                // if any of the conditions are met above then we will do the following
-                // this code will run when the AI wins the game
                 IA.Stop(); // stop the timer
                 MessageBox.Show("Michi Wins"); // show a message box to say computer won
                 IAWins++; // increase the computer wins score number
