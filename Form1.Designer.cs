@@ -47,10 +47,6 @@ namespace JuguemosGato
             this.label1 = new System.Windows.Forms.Label();
             this.namePlayer = new System.Windows.Forms.TextBox();
             this.IA = new System.Windows.Forms.Timer(this.components);
-            this.btnX = new System.Windows.Forms.RadioButton();
-            this.btnO = new System.Windows.Forms.RadioButton();
-            this.botoncitos = new System.Windows.Forms.GroupBox();
-            this.botoncitos.SuspendLayout();
             this.SuspendLayout();
             // 
             // a1
@@ -198,46 +194,11 @@ namespace JuguemosGato
             this.IA.Interval = 1000;
             this.IA.Tick += new System.EventHandler(this.IAmoves);
             // 
-            // btnX
-            // 
-            this.btnX.AutoSize = true;
-            this.btnX.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX.Location = new System.Drawing.Point(6, 19);
-            this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(36, 21);
-            this.btnX.TabIndex = 15;
-            this.btnX.TabStop = true;
-            this.btnX.Text = "X";
-            this.btnX.UseVisualStyleBackColor = true;
-            // 
-            // btnO
-            // 
-            this.btnO.AutoSize = true;
-            this.btnO.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnO.Location = new System.Drawing.Point(48, 19);
-            this.btnO.Name = "btnO";
-            this.btnO.Size = new System.Drawing.Size(36, 21);
-            this.btnO.TabIndex = 16;
-            this.btnO.TabStop = true;
-            this.btnO.Text = "O";
-            this.btnO.UseVisualStyleBackColor = true;
-            // 
-            // botoncitos
-            // 
-            this.botoncitos.Controls.Add(this.btnX);
-            this.botoncitos.Controls.Add(this.btnO);
-            this.botoncitos.Location = new System.Drawing.Point(12, 32);
-            this.botoncitos.Name = "botoncitos";
-            this.botoncitos.Size = new System.Drawing.Size(83, 40);
-            this.botoncitos.TabIndex = 17;
-            this.botoncitos.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 450);
-            this.Controls.Add(this.botoncitos);
             this.Controls.Add(this.namePlayer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPlayer);
@@ -258,8 +219,6 @@ namespace JuguemosGato
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jueguemos Gato con Michi";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.botoncitos.ResumeLayout(false);
-            this.botoncitos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,9 +242,6 @@ namespace JuguemosGato
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox namePlayer;
         private System.Windows.Forms.Timer IA;
-        private System.Windows.Forms.RadioButton btnX;
-        private System.Windows.Forms.RadioButton btnO;
-        private System.Windows.Forms.GroupBox botoncitos;
     }
 }
 
