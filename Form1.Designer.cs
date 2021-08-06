@@ -132,29 +132,32 @@ namespace JuguemosGato
             // 
             // playGame
             // 
+            this.playGame.BackColor = System.Drawing.Color.Transparent;
             this.playGame.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playGame.Location = new System.Drawing.Point(47, 371);
             this.playGame.Name = "playGame";
             this.playGame.Size = new System.Drawing.Size(106, 32);
             this.playGame.TabIndex = 9;
             this.playGame.Text = "Juguemos";
-            this.playGame.UseVisualStyleBackColor = true;
+            this.playGame.UseVisualStyleBackColor = false;
             this.playGame.Click += new System.EventHandler(this.iniciarJuego);
             // 
             // reinicio
             // 
+            this.reinicio.BackColor = System.Drawing.Color.Transparent;
             this.reinicio.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reinicio.Location = new System.Drawing.Point(175, 371);
             this.reinicio.Name = "reinicio";
             this.reinicio.Size = new System.Drawing.Size(104, 32);
             this.reinicio.TabIndex = 10;
             this.reinicio.Text = "¡Otra vez!";
-            this.reinicio.UseVisualStyleBackColor = true;
+            this.reinicio.UseVisualStyleBackColor = false;
             this.reinicio.Click += new System.EventHandler(this.reiniciarJuego);
             // 
             // txtMichi
             // 
             this.txtMichi.AutoSize = true;
+            this.txtMichi.BackColor = System.Drawing.Color.Transparent;
             this.txtMichi.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMichi.Location = new System.Drawing.Point(171, 9);
             this.txtMichi.Name = "txtMichi";
@@ -165,6 +168,7 @@ namespace JuguemosGato
             // txtPlayer
             // 
             this.txtPlayer.AutoSize = true;
+            this.txtPlayer.BackColor = System.Drawing.Color.Transparent;
             this.txtPlayer.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlayer.Location = new System.Drawing.Point(12, 9);
             this.txtPlayer.Name = "txtPlayer";
@@ -175,6 +179,7 @@ namespace JuguemosGato
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(76, 75);
             this.label1.Name = "label1";
@@ -198,6 +203,7 @@ namespace JuguemosGato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JuguemosGato.Properties.Resources.back;
             this.ClientSize = new System.Drawing.Size(310, 450);
             this.Controls.Add(this.namePlayer);
             this.Controls.Add(this.label1);
