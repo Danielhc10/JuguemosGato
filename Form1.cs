@@ -55,20 +55,20 @@ namespace JuguemosGato
 
         private void playerClick(object sender, EventArgs e)
         {
-            var button = (Button)sender; // find which button was clicked
-            jugadorActual = Player.X; // set the player to X
-            button.Text = jugadorActual.ToString(); // change the button text to player X
-            button.Enabled = false; // disable the button
-            button.BackColor = System.Drawing.Color.Cyan; // change the player colour to Cyan
-            buttons.Remove(button); //remove the button from the list buttons so the AI can't click it either
-            Check(); // check if the player won
-            IA.Start(); // stop the AI timer
+            var button = (Button)sender; 
+            jugadorActual = Player.X; 
+            button.Text = jugadorActual.ToString(); 
+            button.Enabled = false; 
+            button.BackColor = System.Drawing.Color.Cyan; 
+            buttons.Remove(button); 
+            Check(); 
+            IA.Start(); 
         }
         private void IAmoves(object sender, EventArgs e)
         {
             if (buttons.Count > 0)
             {
-                int index = rand.Next(buttons.Count); // generate a random number within the number of buttons available
+                int index = rand.Next(buttons.Count); 
                 buttons[index].Enabled = false; 
                 jugadorActual = Player.O; // set the AI with O
                 buttons[index].Text = jugadorActual.ToString(); // show O on the button
