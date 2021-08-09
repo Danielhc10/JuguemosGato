@@ -153,6 +153,11 @@ namespace JuguemosGato
         {
             resetGame();
         }
+
+        private void namePlayer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

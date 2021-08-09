@@ -193,6 +193,7 @@ namespace JuguemosGato
             this.namePlayer.Name = "namePlayer";
             this.namePlayer.Size = new System.Drawing.Size(100, 20);
             this.namePlayer.TabIndex = 14;
+            this.namePlayer.TextChanged += new System.EventHandler(this.namePlayer_TextChanged);
             // 
             // IA
             // 
@@ -204,7 +205,7 @@ namespace JuguemosGato
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JuguemosGato.Properties.Resources.back;
-            this.ClientSize = new System.Drawing.Size(310, 450);
+            this.ClientSize = new System.Drawing.Size(576, 450);
             this.Controls.Add(this.namePlayer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPlayer);
