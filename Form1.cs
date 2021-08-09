@@ -39,20 +39,7 @@ namespace JuguemosGato
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            OnOffBtn(false);
-        }
-
-        private void OnOffBtn(bool OnOff)
-        {
-            a1.Enabled = OnOff;
-            a2.Enabled = OnOff;
-            a3.Enabled = OnOff;
-            b1.Enabled = OnOff;
-            b2.Enabled = OnOff;
-            b3.Enabled = OnOff;
-            c1.Enabled = OnOff;
-            c2.Enabled = OnOff;
-            c3.Enabled = OnOff;
+            panel1.Visible = false;
         }
 
         private void playerClick(object sender, EventArgs e)
@@ -96,17 +83,14 @@ namespace JuguemosGato
         {
             foreach (Control X in this.Controls)
             {
-#pragma warning disable CS0252 // Posible comparación de referencias involuntaria: El lado de la mano izquierda necesita conversión
-                if (X is Button && X.Tag == "play") //X != playGame && X != reinicio/**
-#pragma warning restore CS0252 // Posible comparación de referencias involuntaria: El lado de la mano izquierda necesita conversión
+                if (X is Button && X.Tag == "play")//X != playGame && X != reinicio) // 
                 {
                     ((Button)X).Enabled = true; // change them all back to enabled or clickable
                     ((Button)X).Text = "?"; // set the text to question mark
                     ((Button)X).BackColor = default(Color); // change the background colour to default button colors
                 }
             }
-            loadbuttons();
-            
+            loadbuttons();   
         }
         private void Check()
         {
@@ -179,8 +163,8 @@ namespace JuguemosGato
         private void reiniciarJuego(object sender, EventArgs e)
         {
             resetGame();
-            panel2.Visible = true;
-            panel1.Visible = false;
+            panel2.Visible = true;//nombre x o
+            panel1.Visible = false;// juego
             txtMichi.Text = "Michi Puntos: 0";
             txtPlayer.Text = "Player Puntos: 0";
         }
