@@ -57,14 +57,22 @@ namespace JuguemosGato
 
         private void playerClick(object sender, EventArgs e)
         {
-            var button = (Button)sender; 
-            jugadorActual = Player.X; 
-            button.Text = jugadorActual.ToString(); 
-            button.Enabled = false; 
-            button.BackColor = System.Drawing.Color.Cyan; 
-            buttons.Remove(button); 
-            Check(); 
-            IA.Start(); 
+            if (buttons.Count > 0)
+            {
+                var button = (Button)sender;
+                jugadorActual = Player.X;
+                button.Text = PlayerJuego; //xo
+                button.Enabled = false;
+                button.BackColor = System.Drawing.Color.Cyan;
+                buttons.Remove(button);
+                Check();
+                IA.Start();
+            }
+            else
+            {
+                MessageBox.Show("¡Empate!", "Oh!, No", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                resetGame();
+            }
         }
         private void IAmoves(object sender, EventArgs e)
         {
@@ -73,7 +81,7 @@ namespace JuguemosGato
                 int index = rand.Next(buttons.Count); 
                 buttons[index].Enabled = false; 
                 jugadorActual = Player.O; // set the AI with O
-                buttons[index].Text = jugadorActual.ToString(); // show O on the button
+                buttons[index].Text = IAJuego; // show O on the button xo
                 buttons[index].BackColor = System.Drawing.Color.DarkSalmon; // change the background of the button dark salmon colour
                 buttons.RemoveAt(index); // remove that button from the list
                 Check(); // check if the AI won anything
@@ -88,19 +96,17 @@ namespace JuguemosGato
         {
             foreach (Control X in this.Controls)
             {
-                if (X is Button && X != playGame && X != reinicio/**&& X.Tag == "play"**/)
+#pragma warning disable CS0252 // Posible comparación de referencias involuntaria: El lado de la mano izquierda necesita conversión
+                if (X is Button && X.Tag == "play") //X != playGame && X != reinicio/**
+#pragma warning restore CS0252 // Posible comparación de referencias involuntaria: El lado de la mano izquierda necesita conversión
                 {
                     ((Button)X).Enabled = true; // change them all back to enabled or clickable
                     ((Button)X).Text = "?"; // set the text to question mark
                     ((Button)X).BackColor = default(Color); // change the background colour to default button colors
                 }
             }
-
             loadbuttons();
-            panel2.Visible = true;
-            panel1.Visible = false;
-            txtMichi.Text = "Michi Puntos: 0";
-            txtPlayer.Text = "Player Puntos: 0";
+            
         }
         private void Check()
         {
@@ -173,6 +179,10 @@ namespace JuguemosGato
         private void reiniciarJuego(object sender, EventArgs e)
         {
             resetGame();
+            panel2.Visible = true;
+            panel1.Visible = false;
+            txtMichi.Text = "Michi Puntos: 0";
+            txtPlayer.Text = "Player Puntos: 0";
         }
 
         private void namePlayer_TextChanged(object sender, EventArgs e)
