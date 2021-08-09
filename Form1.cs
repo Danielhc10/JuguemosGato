@@ -23,7 +23,8 @@ namespace JuguemosGato
         Random rand = new Random();
 
         string nombre = "";
-        
+        string PlayerJuego = "X"; //ingnora la X es la seleccion de ficha
+        string IAJuego = "O"; //La ficha que le toca a Michi
         int playerWins = 0;
         int IAWins = 0;
 
@@ -32,6 +33,7 @@ namespace JuguemosGato
             InitializeComponent();
             resetGame();
             this.reinicio.Enabled = false;
+            panel2.Visible = true; //XO
             
         }
 
@@ -95,40 +97,44 @@ namespace JuguemosGato
             }
 
             loadbuttons();
+            panel2.Visible = true;
+            panel1.Visible = false;
+            txtMichi.Text = "Michi Puntos: 0";
+            txtPlayer.Text = "Player Puntos: 0";
         }
         private void Check()
         {
-            if (a1.Text == "X" && a2.Text == "X" && a3.Text == "X"
-               || b1.Text == "X" && b2.Text == "X" && b3.Text == "X"
-               || c1.Text == "X" && c2.Text == "X" && c3.Text == "X"
-               || a1.Text == "X" && b1.Text == "X" && c1.Text == "X"
-               || a2.Text == "X" && b2.Text == "X" && c2.Text == "X"
-               || a3.Text == "X" && b3.Text == "X" && c3.Text == "X"
-               || a1.Text == "X" && b2.Text == "X" && c3.Text == "X"
-               || a3.Text == "X" && b2.Text == "X" && c1.Text == "X")
+            if (a1.Text == PlayerJuego && a2.Text == PlayerJuego && a3.Text == PlayerJuego
+               || b1.Text == PlayerJuego && b2.Text == PlayerJuego && b3.Text == PlayerJuego
+               || c1.Text == PlayerJuego && c2.Text == PlayerJuego && c3.Text == PlayerJuego
+               || a1.Text == PlayerJuego && b1.Text == PlayerJuego && c1.Text == PlayerJuego
+               || a2.Text == PlayerJuego && b2.Text == PlayerJuego && c2.Text == PlayerJuego
+               || a3.Text == PlayerJuego && b3.Text == PlayerJuego && c3.Text == PlayerJuego
+               || a1.Text == PlayerJuego && b2.Text == PlayerJuego && c3.Text == PlayerJuego
+               || a3.Text == PlayerJuego && b2.Text == PlayerJuego && c1.Text == PlayerJuego)//XO
             {
                 
                 IA.Stop(); //stop the timer
-                MessageBox.Show(nombre + " Wins"); // show a message to the player
+                MessageBox.Show(nombre + " Ganó! "); // show a message to the player
                 playerWins++; // increase the player wins 
-                txtPlayer.Text = (nombre + " Wins - " + playerWins); // update player label
+                txtPlayer.Text = (nombre + " Puntos: " + playerWins); // update player label
                 resetGame(); // run the reset game function
             }
             // below if statement is for when the AI wins the game
-            else if (a1.Text == "O" && a2.Text == "O" && a3.Text == "O"
-                   || b1.Text == "O" && b2.Text == "O" && b3.Text == "O"
-                   || c1.Text == "O" && c2.Text == "O" && c3.Text == "O"
-                   || a1.Text == "O" && b1.Text == "O" && c1.Text == "O"
-                   || a2.Text == "O" && b2.Text == "O" && c2.Text == "O"
-                   || a3.Text == "O" && b3.Text == "O" && c3.Text == "O"
-                   || a1.Text == "O" && b2.Text == "O" && c3.Text == "O"
-                   || a3.Text == "O" && b2.Text == "O" && c1.Text == "O")
+            else if (a1.Text == IAJuego && a2.Text == IAJuego && a3.Text == IAJuego
+                   || b1.Text == IAJuego && b2.Text == IAJuego && b3.Text == IAJuego
+                   || c1.Text == IAJuego && c2.Text == IAJuego && c3.Text == IAJuego
+                   || a1.Text == IAJuego && b1.Text == IAJuego && c1.Text == IAJuego
+                   || a2.Text == IAJuego && b2.Text == IAJuego && c2.Text == IAJuego
+                   || a3.Text == IAJuego && b3.Text == IAJuego && c3.Text == IAJuego
+                   || a1.Text == IAJuego && b2.Text == IAJuego && c3.Text == IAJuego
+                   || a3.Text == IAJuego && b2.Text == IAJuego && c1.Text == IAJuego)//XO
             {
 
                 IA.Stop(); // stop the timer
-                MessageBox.Show("Michi Wins"); // show a message box to say computer won
+                MessageBox.Show("Michi Ganó"); // show a message box to say computer won
                 IAWins++; // increase the computer wins score number
-                txtMichi.Text = "Michi wins - " + IAWins; // update the label 2 for computer wins
+                txtMichi.Text = "Michi Puntos:" + IAWins; // update the label 2 for computer wins
                 resetGame(); // run the reset game
             }
 
@@ -141,12 +147,27 @@ namespace JuguemosGato
             {
                 MessageBox.Show("¿Contra quien voy a jugar?", "Ingresa un nombre", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (namePlayer.Text != "")
+            if (namePlayer.Text != "" && (radioButton1.Checked || radioButton2.Checked))
             {
                 nombre = namePlayer.Text;
-                txtPlayer.Text = (nombre + " Wins - " + playerWins);
+                txtPlayer.Text = (nombre + " Puntos: " + playerWins);
                 reinicio.Enabled = true;
                 resetGame();
+                panel1.Visible = true;//XO
+                if (radioButton1.Checked)
+                {
+                    PlayerJuego = "X";
+                    IAJuego = "O";
+                }
+                else
+                {
+                    PlayerJuego = "O";
+                    IAJuego = "X";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Elige X o O para jugar", "Selecciona una ficha", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void reiniciarJuego(object sender, EventArgs e)

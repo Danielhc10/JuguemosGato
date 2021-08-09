@@ -49,11 +49,18 @@ namespace JuguemosGato
             this.IA = new System.Windows.Forms.Timer(this.components);
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Foto_gato = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_gato)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // a1
             // 
-            this.a1.Location = new System.Drawing.Point(77, 127);
+            this.a1.Location = new System.Drawing.Point(76, 100);
             this.a1.Name = "a1";
             this.a1.Size = new System.Drawing.Size(50, 50);
             this.a1.TabIndex = 0;
@@ -62,7 +69,7 @@ namespace JuguemosGato
             // 
             // a2
             // 
-            this.a2.Location = new System.Drawing.Point(133, 127);
+            this.a2.Location = new System.Drawing.Point(132, 100);
             this.a2.Name = "a2";
             this.a2.Size = new System.Drawing.Size(50, 50);
             this.a2.TabIndex = 1;
@@ -71,7 +78,7 @@ namespace JuguemosGato
             // 
             // a3
             // 
-            this.a3.Location = new System.Drawing.Point(189, 127);
+            this.a3.Location = new System.Drawing.Point(188, 100);
             this.a3.Name = "a3";
             this.a3.Size = new System.Drawing.Size(50, 50);
             this.a3.TabIndex = 2;
@@ -80,7 +87,7 @@ namespace JuguemosGato
             // 
             // b3
             // 
-            this.b3.Location = new System.Drawing.Point(189, 183);
+            this.b3.Location = new System.Drawing.Point(188, 156);
             this.b3.Name = "b3";
             this.b3.Size = new System.Drawing.Size(50, 50);
             this.b3.TabIndex = 5;
@@ -89,7 +96,7 @@ namespace JuguemosGato
             // 
             // b2
             // 
-            this.b2.Location = new System.Drawing.Point(133, 183);
+            this.b2.Location = new System.Drawing.Point(132, 156);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(50, 50);
             this.b2.TabIndex = 4;
@@ -98,7 +105,7 @@ namespace JuguemosGato
             // 
             // b1
             // 
-            this.b1.Location = new System.Drawing.Point(77, 183);
+            this.b1.Location = new System.Drawing.Point(76, 156);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(50, 50);
             this.b1.TabIndex = 3;
@@ -107,7 +114,7 @@ namespace JuguemosGato
             // 
             // c3
             // 
-            this.c3.Location = new System.Drawing.Point(189, 239);
+            this.c3.Location = new System.Drawing.Point(188, 212);
             this.c3.Name = "c3";
             this.c3.Size = new System.Drawing.Size(50, 50);
             this.c3.TabIndex = 8;
@@ -116,7 +123,7 @@ namespace JuguemosGato
             // 
             // c2
             // 
-            this.c2.Location = new System.Drawing.Point(133, 239);
+            this.c2.Location = new System.Drawing.Point(132, 212);
             this.c2.Name = "c2";
             this.c2.Size = new System.Drawing.Size(50, 50);
             this.c2.TabIndex = 7;
@@ -125,7 +132,7 @@ namespace JuguemosGato
             // 
             // c1
             // 
-            this.c1.Location = new System.Drawing.Point(77, 239);
+            this.c1.Location = new System.Drawing.Point(76, 212);
             this.c1.Name = "c1";
             this.c1.Size = new System.Drawing.Size(50, 50);
             this.c1.TabIndex = 6;
@@ -136,7 +143,7 @@ namespace JuguemosGato
             // 
             this.playGame.BackColor = System.Drawing.Color.Transparent;
             this.playGame.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playGame.Location = new System.Drawing.Point(47, 371);
+            this.playGame.Location = new System.Drawing.Point(71, 226);
             this.playGame.Name = "playGame";
             this.playGame.Size = new System.Drawing.Size(106, 32);
             this.playGame.TabIndex = 9;
@@ -148,7 +155,7 @@ namespace JuguemosGato
             // 
             this.reinicio.BackColor = System.Drawing.Color.Transparent;
             this.reinicio.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reinicio.Location = new System.Drawing.Point(175, 371);
+            this.reinicio.Location = new System.Drawing.Point(105, 293);
             this.reinicio.Name = "reinicio";
             this.reinicio.Size = new System.Drawing.Size(104, 32);
             this.reinicio.TabIndex = 10;
@@ -158,32 +165,30 @@ namespace JuguemosGato
             // 
             // txtMichi
             // 
-            this.txtMichi.AutoSize = true;
             this.txtMichi.BackColor = System.Drawing.Color.Transparent;
-            this.txtMichi.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMichi.Location = new System.Drawing.Point(171, 9);
+            this.txtMichi.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMichi.Location = new System.Drawing.Point(175, 23);
             this.txtMichi.Name = "txtMichi";
             this.txtMichi.Size = new System.Drawing.Size(127, 20);
             this.txtMichi.TabIndex = 11;
-            this.txtMichi.Text = "Michi wins - 0";
+            this.txtMichi.Text = "Michi Puntos: 0";
             // 
             // txtPlayer
             // 
-            this.txtPlayer.AutoSize = true;
             this.txtPlayer.BackColor = System.Drawing.Color.Transparent;
-            this.txtPlayer.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayer.Location = new System.Drawing.Point(12, 9);
+            this.txtPlayer.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayer.Location = new System.Drawing.Point(13, 23);
             this.txtPlayer.Name = "txtPlayer";
-            this.txtPlayer.Size = new System.Drawing.Size(134, 20);
+            this.txtPlayer.Size = new System.Drawing.Size(156, 20);
             this.txtPlayer.TabIndex = 12;
-            this.txtPlayer.Text = "Player wins - 0";
+            this.txtPlayer.Text = "Jugador Puntos: 0";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 75);
+            this.label1.Location = new System.Drawing.Point(56, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 25);
             this.label1.TabIndex = 13;
@@ -191,7 +196,7 @@ namespace JuguemosGato
             // 
             // namePlayer
             // 
-            this.namePlayer.Location = new System.Drawing.Point(110, 323);
+            this.namePlayer.Location = new System.Drawing.Point(102, 105);
             this.namePlayer.Name = "namePlayer";
             this.namePlayer.Size = new System.Drawing.Size(100, 20);
             this.namePlayer.TabIndex = 14;
@@ -205,52 +210,92 @@ namespace JuguemosGato
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(327, 303);
+            this.radioButton1.Location = new System.Drawing.Point(49, 162);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.Size = new System.Drawing.Size(32, 17);
             this.radioButton1.TabIndex = 15;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.Text = "X";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(327, 337);
+            this.radioButton2.Location = new System.Drawing.Point(155, 162);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.Size = new System.Drawing.Size(33, 17);
             this.radioButton2.TabIndex = 16;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.Text = "O";
             this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Nombre:";
+            // 
+            // Foto_gato
+            // 
+            this.Foto_gato.Location = new System.Drawing.Point(71, 3);
+            this.Foto_gato.Name = "Foto_gato";
+            this.Foto_gato.Size = new System.Drawing.Size(115, 69);
+            this.Foto_gato.TabIndex = 18;
+            this.Foto_gato.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtPlayer);
+            this.panel1.Controls.Add(this.txtMichi);
+            this.panel1.Controls.Add(this.reinicio);
+            this.panel1.Controls.Add(this.c3);
+            this.panel1.Controls.Add(this.c2);
+            this.panel1.Controls.Add(this.c1);
+            this.panel1.Controls.Add(this.b3);
+            this.panel1.Controls.Add(this.b2);
+            this.panel1.Controls.Add(this.b1);
+            this.panel1.Controls.Add(this.a3);
+            this.panel1.Controls.Add(this.a2);
+            this.panel1.Controls.Add(this.a1);
+            this.panel1.Location = new System.Drawing.Point(262, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(312, 344);
+            this.panel1.TabIndex = 19;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Foto_gato);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.namePlayer);
+            this.panel2.Controls.Add(this.playGame);
+            this.panel2.Location = new System.Drawing.Point(12, 69);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(240, 285);
+            this.panel2.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 450);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.namePlayer);
+            this.ClientSize = new System.Drawing.Size(588, 366);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtPlayer);
-            this.Controls.Add(this.txtMichi);
-            this.Controls.Add(this.reinicio);
-            this.Controls.Add(this.playGame);
-            this.Controls.Add(this.c3);
-            this.Controls.Add(this.c2);
-            this.Controls.Add(this.c1);
-            this.Controls.Add(this.b3);
-            this.Controls.Add(this.b2);
-            this.Controls.Add(this.b1);
-            this.Controls.Add(this.a3);
-            this.Controls.Add(this.a2);
-            this.Controls.Add(this.a1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jueguemos Gato con Michi";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_gato)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,6 +321,10 @@ namespace JuguemosGato
         private System.Windows.Forms.Timer IA;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox Foto_gato;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
