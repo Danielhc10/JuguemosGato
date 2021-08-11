@@ -201,7 +201,6 @@ namespace JuguemosGato
             this.namePlayer.Name = "namePlayer";
             this.namePlayer.Size = new System.Drawing.Size(100, 20);
             this.namePlayer.TabIndex = 14;
-            this.namePlayer.TextChanged += new System.EventHandler(this.namePlayer_TextChanged);
             // 
             // IA
             // 
