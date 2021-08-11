@@ -18,7 +18,7 @@ namespace JuguemosGato
             X, O
         }
 
-        Player jugadorActual;
+        
         List<Button> buttons;
         Random rand = new Random();
 
@@ -44,8 +44,7 @@ namespace JuguemosGato
 
         private void playerClick(object sender, EventArgs e)
         {
-            if (buttons.Count > 0)
-            {
+            if (buttons.Count > 0) { 
                 var button = (Button)sender;
                 //jugadorActual = Player.X;
                 button.Text = PlayerJuego; //xo
@@ -57,6 +56,7 @@ namespace JuguemosGato
             }
             else
             {
+                //empate Xo
                 MessageBox.Show("¡Empate!", "Oh!, No", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 resetGame();
             }
@@ -73,6 +73,12 @@ namespace JuguemosGato
                 buttons.RemoveAt(index); // remove that button from the list
                 Check(); // check if the AI won anything
                 IA.Stop(); // stop the AI timer
+            }
+            else
+            {
+                //empate Xo
+                MessageBox.Show("¡Empate!", "Oh!, No", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                resetGame();
             }
         }
         private void loadbuttons()
@@ -184,14 +190,23 @@ namespace JuguemosGato
         {
             resetGame();
             panel2.Visible = true;//nombre x o
-            panel1.Visible = true;// juego
-            //txtMichi.Text = "Michi Puntos: 0";
-            //txtPlayer.Text = "Player Puntos: 0";
+            panel1.Visible = false;// juego
+            txtMichi.Text = "Michi Puntos: 0";
+            txtPlayer.Text = "Player Puntos: 0";
+            IAWins = 0;
+            playerWins = 0;
         }
 
         private void namePlayer_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Foto_gato_Click(object sender, EventArgs e)
+        {
+            resetGame();
+            //txtMichi.Text = "Michi Puntos: 0";
+            //txtPlayer.Text = "Player Puntos: 0";
         }
     }
 }
