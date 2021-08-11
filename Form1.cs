@@ -47,7 +47,7 @@ namespace JuguemosGato
             if (buttons.Count > 0)
             {
                 var button = (Button)sender;
-                jugadorActual = Player.X;
+                //jugadorActual = Player.X;
                 button.Text = PlayerJuego; //xo
                 button.Enabled = false;
                 button.BackColor = System.Drawing.Color.Cyan;
@@ -67,7 +67,7 @@ namespace JuguemosGato
             {
                 int index = rand.Next(buttons.Count); 
                 buttons[index].Enabled = false; 
-                jugadorActual = Player.O; // set the AI with O
+                //jugadorActual = Player.O; // set the AI with O
                 buttons[index].Text = IAJuego; // show O on the button xo
                 buttons[index].BackColor = System.Drawing.Color.DarkSalmon; // change the background of the button dark salmon colour
                 buttons.RemoveAt(index); // remove that button from the list
@@ -78,18 +78,38 @@ namespace JuguemosGato
         private void loadbuttons()
         {
             buttons = new List<Button> { a1, a2, a3, b1, b2, b3, c1, c2, c3 };
+
         }
         private void resetGame()
         {
-            foreach (Control X in this.Controls)
-            {
-                if (X is Button && X.Tag == "play")//X != playGame && X != reinicio) // 
-                {
-                    ((Button)X).Enabled = true; // change them all back to enabled or clickable
-                    ((Button)X).Text = "?"; // set the text to question mark
-                    ((Button)X).BackColor = default(Color); // change the background colour to default button colors
-                }
-            }
+            a1.Text = "";
+            a2.Text = "";
+            a3.Text = "";
+            b1.Text = "";
+            b2.Text = "";
+            b3.Text = "";
+            c1.Text = "";
+            c2.Text = "";
+            c3.Text = "";
+            a1.Enabled = true;
+            a2.Enabled = true;
+            a3.Enabled = true;
+            b1.Enabled = true;
+            b2.Enabled = true;
+            b3.Enabled = true;
+            c1.Enabled = true;
+            c2.Enabled = true;
+            c3.Enabled = true;
+            a1.BackColor = default(Color);
+            a2.BackColor = default(Color);
+            a3.BackColor = default(Color);
+            b1.BackColor = default(Color);
+            b2.BackColor = default(Color);
+            b3.BackColor = default(Color);
+            c1.BackColor = default(Color);
+            c2.BackColor = default(Color);
+            c3.BackColor = default(Color);
+
             loadbuttons();   
         }
         private void Check()
@@ -164,9 +184,9 @@ namespace JuguemosGato
         {
             resetGame();
             panel2.Visible = true;//nombre x o
-            panel1.Visible = false;// juego
-            txtMichi.Text = "Michi Puntos: 0";
-            txtPlayer.Text = "Player Puntos: 0";
+            panel1.Visible = true;// juego
+            //txtMichi.Text = "Michi Puntos: 0";
+            //txtPlayer.Text = "Player Puntos: 0";
         }
 
         private void namePlayer_TextChanged(object sender, EventArgs e)
