@@ -41,7 +41,7 @@ namespace JuguemosGato
             this.c2 = new System.Windows.Forms.Button();
             this.c1 = new System.Windows.Forms.Button();
             this.playGame = new System.Windows.Forms.Button();
-            this.reinicio = new System.Windows.Forms.Button();
+            this.reset = new System.Windows.Forms.Button();
             this.txtMichi = new System.Windows.Forms.Label();
             this.txtPlayer = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@ namespace JuguemosGato
             this.Foto_gato = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_gato)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -143,7 +144,7 @@ namespace JuguemosGato
             // 
             this.playGame.BackColor = System.Drawing.Color.Transparent;
             this.playGame.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playGame.Location = new System.Drawing.Point(71, 226);
+            this.playGame.Location = new System.Drawing.Point(65, 243);
             this.playGame.Name = "playGame";
             this.playGame.Size = new System.Drawing.Size(106, 32);
             this.playGame.TabIndex = 9;
@@ -151,17 +152,17 @@ namespace JuguemosGato
             this.playGame.UseVisualStyleBackColor = false;
             this.playGame.Click += new System.EventHandler(this.iniciarJuego);
             // 
-            // reinicio
+            // reset
             // 
-            this.reinicio.BackColor = System.Drawing.Color.Transparent;
-            this.reinicio.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reinicio.Location = new System.Drawing.Point(105, 293);
-            this.reinicio.Name = "reinicio";
-            this.reinicio.Size = new System.Drawing.Size(104, 32);
-            this.reinicio.TabIndex = 10;
-            this.reinicio.Text = "¡Otra vez!";
-            this.reinicio.UseVisualStyleBackColor = false;
-            this.reinicio.Click += new System.EventHandler(this.reiniciarJuego);
+            this.reset.BackColor = System.Drawing.Color.Transparent;
+            this.reset.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset.Location = new System.Drawing.Point(105, 293);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(104, 32);
+            this.reset.TabIndex = 10;
+            this.reset.Text = "¡Otra vez!";
+            this.reset.UseVisualStyleBackColor = false;
+            this.reset.Click += new System.EventHandler(this.reiniciarJuego);
             // 
             // txtMichi
             // 
@@ -196,7 +197,7 @@ namespace JuguemosGato
             // 
             // namePlayer
             // 
-            this.namePlayer.Location = new System.Drawing.Point(102, 105);
+            this.namePlayer.Location = new System.Drawing.Point(96, 122);
             this.namePlayer.Name = "namePlayer";
             this.namePlayer.Size = new System.Drawing.Size(100, 20);
             this.namePlayer.TabIndex = 14;
@@ -210,9 +211,11 @@ namespace JuguemosGato
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(49, 162);
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.Red;
+            this.radioButton1.Location = new System.Drawing.Point(43, 179);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(32, 17);
+            this.radioButton1.Size = new System.Drawing.Size(39, 24);
             this.radioButton1.TabIndex = 15;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "X";
@@ -221,9 +224,11 @@ namespace JuguemosGato
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(155, 162);
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.LimeGreen;
+            this.radioButton2.Location = new System.Drawing.Point(149, 179);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(33, 17);
+            this.radioButton2.Size = new System.Drawing.Size(40, 24);
             this.radioButton2.TabIndex = 16;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "O";
@@ -232,15 +237,16 @@ namespace JuguemosGato
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 108);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(62, 15);
             this.label2.TabIndex = 17;
             this.label2.Text = "Nombre:";
             // 
             // Foto_gato
             // 
-            this.Foto_gato.Location = new System.Drawing.Point(71, 3);
+            this.Foto_gato.Location = new System.Drawing.Point(65, 20);
             this.Foto_gato.Name = "Foto_gato";
             this.Foto_gato.Size = new System.Drawing.Size(115, 69);
             this.Foto_gato.TabIndex = 18;
@@ -248,9 +254,10 @@ namespace JuguemosGato
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtPlayer);
             this.panel1.Controls.Add(this.txtMichi);
-            this.panel1.Controls.Add(this.reinicio);
+            this.panel1.Controls.Add(this.reset);
             this.panel1.Controls.Add(this.c3);
             this.panel1.Controls.Add(this.c2);
             this.panel1.Controls.Add(this.c1);
@@ -273,10 +280,20 @@ namespace JuguemosGato
             this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.namePlayer);
             this.panel2.Controls.Add(this.playGame);
-            this.panel2.Location = new System.Drawing.Point(12, 69);
+            this.panel2.Location = new System.Drawing.Point(12, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 285);
+            this.panel2.Size = new System.Drawing.Size(240, 301);
             this.panel2.TabIndex = 20;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(135, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 28);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -313,7 +330,7 @@ namespace JuguemosGato
         private System.Windows.Forms.Button c2;
         private System.Windows.Forms.Button c1;
         private System.Windows.Forms.Button playGame;
-        private System.Windows.Forms.Button reinicio;
+        private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Label txtMichi;
         private System.Windows.Forms.Label txtPlayer;
         private System.Windows.Forms.Label label1;
@@ -325,6 +342,7 @@ namespace JuguemosGato
         private System.Windows.Forms.PictureBox Foto_gato;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

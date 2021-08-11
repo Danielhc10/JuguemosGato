@@ -32,7 +32,7 @@ namespace JuguemosGato
         {
             InitializeComponent();
             resetGame();
-            this.reinicio.Enabled = false;
+            this.reset.Enabled = false;
             panel2.Visible = true; //XO
             
         }
@@ -161,7 +161,7 @@ namespace JuguemosGato
             {
                 nombre = namePlayer.Text;
                 txtPlayer.Text = (nombre + " Puntos: " + playerWins);
-                reinicio.Enabled = true;
+                reset.Enabled = true;
                 resetGame();
                 panel1.Visible = true;//XO
                 if (radioButton1.Checked)
