@@ -84,6 +84,8 @@
     <None Include="Resources\back.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\gatito %281%29.png" />
+    <None Include="Resources\gatito.png" />
     <Content Include="Resources\restart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

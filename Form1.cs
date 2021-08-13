@@ -34,12 +34,15 @@ namespace JuguemosGato
             resetGame();
             this.reset.Enabled = false;
             panel2.Visible = true; //XO
+            gatito.Visible = true;
+            gatito2.Visible = false;
             
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
+            //gatito.Visible = true;
         }
 
         private void playerClick(object sender, EventArgs e)
@@ -163,6 +166,8 @@ namespace JuguemosGato
                 reset.Enabled = true;
                 resetGame();
                 panel1.Visible = true;//XO
+                gatito.Visible = false;
+                gatito2.Visible = true;
                 if (radioButton1.Checked)
                 {
                     PlayerJuego = "X";
@@ -188,6 +193,8 @@ namespace JuguemosGato
             txtPlayer.Text = "Player Puntos: 0";
             IAWins = 0;
             playerWins = 0;
+            gatito.Visible = true;
+            gatito2.Visible = false;
         }
 
         private void Foto_gato_Click(object sender, EventArgs e)
@@ -196,6 +203,8 @@ namespace JuguemosGato
             //txtMichi.Text = "Michi Puntos: 0";
             //txtPlayer.Text = "Player Puntos: 0";
         }
+
+       
     }
 }
 

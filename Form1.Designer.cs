@@ -51,12 +51,16 @@ namespace JuguemosGato
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Foto_gato = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.gatito2 = new System.Windows.Forms.PictureBox();
+            this.gatito = new System.Windows.Forms.PictureBox();
+            this.Foto_gato = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Foto_gato)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gatito2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gatito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_gato)).BeginInit();
             this.SuspendLayout();
             // 
             // a1
@@ -197,9 +201,10 @@ namespace JuguemosGato
             // 
             // namePlayer
             // 
+            this.namePlayer.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namePlayer.Location = new System.Drawing.Point(96, 122);
             this.namePlayer.Name = "namePlayer";
-            this.namePlayer.Size = new System.Drawing.Size(100, 20);
+            this.namePlayer.Size = new System.Drawing.Size(100, 28);
             this.namePlayer.TabIndex = 14;
             // 
             // IA
@@ -263,24 +268,15 @@ namespace JuguemosGato
             this.panel1.Size = new System.Drawing.Size(312, 344);
             this.panel1.TabIndex = 19;
             // 
-            // Foto_gato
-            // 
-            this.Foto_gato.Image = global::JuguemosGato.Properties.Resources.restart;
-            this.Foto_gato.Location = new System.Drawing.Point(199, 283);
-            this.Foto_gato.Name = "Foto_gato";
-            this.Foto_gato.Size = new System.Drawing.Size(39, 35);
-            this.Foto_gato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Foto_gato.TabIndex = 18;
-            this.Foto_gato.TabStop = false;
-            this.Foto_gato.Click += new System.EventHandler(this.Foto_gato_Click);
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.gatito);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.namePlayer);
             this.panel2.Controls.Add(this.playGame);
+            this.panel2.Controls.Add(this.gatito2);
             this.panel2.Location = new System.Drawing.Point(12, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 301);
@@ -291,6 +287,37 @@ namespace JuguemosGato
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // gatito2
+            // 
+            this.gatito2.Image = global::JuguemosGato.Properties.Resources.gatito;
+            this.gatito2.Location = new System.Drawing.Point(60, 3);
+            this.gatito2.Name = "gatito2";
+            this.gatito2.Size = new System.Drawing.Size(119, 104);
+            this.gatito2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gatito2.TabIndex = 19;
+            this.gatito2.TabStop = false;
+            // 
+            // gatito
+            // 
+            this.gatito.Image = global::JuguemosGato.Properties.Resources.gatito__1_;
+            this.gatito.Location = new System.Drawing.Point(60, 3);
+            this.gatito.Name = "gatito";
+            this.gatito.Size = new System.Drawing.Size(119, 104);
+            this.gatito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gatito.TabIndex = 18;
+            this.gatito.TabStop = false;
+            // 
+            // Foto_gato
+            // 
+            this.Foto_gato.Image = global::JuguemosGato.Properties.Resources.restart;
+            this.Foto_gato.Location = new System.Drawing.Point(199, 283);
+            this.Foto_gato.Name = "Foto_gato";
+            this.Foto_gato.Size = new System.Drawing.Size(39, 35);
+            this.Foto_gato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Foto_gato.TabIndex = 18;
+            this.Foto_gato.TabStop = false;
+            this.Foto_gato.Click += new System.EventHandler(this.Foto_gato_Click);
             // 
             // Form1
             // 
@@ -307,9 +334,11 @@ namespace JuguemosGato
             this.Text = "Jueguemos Gato con Michi";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Foto_gato)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gatito2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gatito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_gato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,6 +369,8 @@ namespace JuguemosGato
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox gatito;
+        private System.Windows.Forms.PictureBox gatito2;
     }
 }
 
